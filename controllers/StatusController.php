@@ -9,11 +9,11 @@
 
 		public function actionCreate(){
 	
-			$model = new Status;
-			if($model->load(Yii::$app->request->post())&&$model->validate()){
-				return $this->render('view',['model',$model]);
+			$model = new Status();
+			if($model->load(Yii::$app->request->post()) && $model->validate()){
+				return $this->render('view',['model'=>$model]);
 			} else{
-				return $this->render('create',['model',$model]);
+				return $this->render('create',['model'=>$model]);
 			}
 		}
 	}
